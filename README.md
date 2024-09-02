@@ -2,6 +2,8 @@
 
 Project carried out during my year of training as a D.A.
 
+Website Sales Analysis and Optimisation
+
 English version :
 # 1
 #What datasets were used to achieve the objectives of this project?
@@ -38,6 +40,8 @@ The main objectives of data exploration, visualisation and pre-processing for th
 #These objectives are designed to make the most of the data available to drive business growth and efficiency in an ever-changing business environment.
 
 ################################
+Analyse et optimisation des Ventes d'un Site Web
+
 Version Française :
 # 1
 #Quels jeux de données utilisés pour atteindre les objectifs de ce projet ?
@@ -54,6 +58,7 @@ Les données étaient disponibles librement sur Kaggle
 #2 files : property A  : 2 520 259 lignes / 4 cols and  property B : 2 115 992 lignes / 4 cols
 #1 file category 1669 lignes / 2 cols
 
+https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
 
 # 2 
 
