@@ -1,79 +1,68 @@
-# Data-Analyst-certification-project
+# Data Analyst Certification Project
 
-Project carried out during my year of training as a D.A.
+Project conducted during my Data Analyst certification year.
 
-Website Sales Analysis and Optimisation
+## Website Sales Analysis and Optimization
 
-English version :
-# 1
-#What datasets were used to achieve the objectives of this project?
+### Datasets Overview
 
-#Four datasets: 
-#one file containing behavioural data (events.csv), two files containing item properties (item_properties.сsv) and one file describing the category tree (category_tree.сsv). 
-The data was collected from a real e-commerce website. 
-This is raw data, i.e. without any transformation of the content, but all values were anonymised for confidentiality reasons. 
-The data was freely available on Kaggle
+For this project, four key datasets were utilized:
 
-# Volumetry :
-#1 file : event csv  275609 lignes / 5 cols
-#2 files : property A  : 2 520 259 lignes / 4 cols and  property B : 2 115 992 lignes / 4 cols
-#1 file category 1669 lignes / 2 cols
+- Behavioral Data: Captured in the `events.csv` file, this dataset records user interactions on the website, providing insights into customer behaviors and preferences.
+- Item Properties: Two files, `item_properties_A.csv` and `item_properties_B.csv`, containing detailed attributes of the items listed on the website. These datasets are crucial for understanding product characteristics and their impact on sales.
+- Category Tree: The `category_tree.csv` file outlines the hierarchical structure of product categories, essential for analyzing trends across different product segments.
 
-https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
+*All data were sourced from a real e-commerce platform, anonymized for privacy, and are available on Kaggle.
 
-# 2 
+### Data Volumetrics
 
-The main objectives of data exploration, visualisation and pre-processing for this online sales project are :
+- Events: 275,609 rows / 5 columns
+- Item Properties A: 2,520,259 rows / 4 columns
+- Item Properties B: 2,115,992 rows / 4 columns
+- Category Tree: 1,669 rows / 2 columns
 
-#In-depth understanding of customer behaviour: Identify customer buying patterns, preferences and behaviour to improve marketing strategy and service personalisation. 
+[Kaggle Dataset Link](https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset)
 
-#Sales Operations Optimisation: Analyse sales trends to optimise stock management, pricing and promotional campaigns. 
+### Project Objectives
 
-#Improve Decision Making: Provide reliable data and insights to support strategic business decisions. 
+The main objectives of this project were to:
 
-#Identify Growth Opportunities: Discover potential new markets, customer segments or popular products that could generate additional revenue. 
+- Deep Dive into Customer Behavior: Uncover purchasing patterns and preferences to enhance personalized marketing strategies and customer engagement.
+- Optimize Sales Operations: Analyze sales trends to improve inventory management, pricing strategies, and the effectiveness of promotional campaigns.
+- Support Strategic Decision-Making: Provide actionable insights backed by reliable data to inform key business decisions.
+- Identify Growth Opportunities: Discover new market segments, popular products, and potential revenue streams to drive business expansion.
+- Ensure Data Integrity: Detect and correct anomalies in the data to maintain the accuracy and efficiency of business operations.
+- Prepare for Advanced Analytics: Cleanse and transform the data to facilitate advanced analytics, including machine learning and predictive modeling.
 
-#Anomaly Detection and Correction: Identify data errors or anomalies to ensure safe and efficient operations. 
+These objectives aim to leverage data to drive growth and operational efficiency in a dynamic business environment.
 
-#Preparing Data for Advanced Analysis: cleansing and transforming data to facilitate more complex analyses, such as machine learning or predictive analysis. 
-
-#These objectives are designed to make the most of the data available to drive business growth and efficiency in an ever-changing business environment.
 
 ################################
-Analyse et optimisation des Ventes d'un Site Web
+Projet réalisé pendant mon année de certification d'analyste de données.
 
-Version Française :
-# 1
-#Quels jeux de données utilisés pour atteindre les objectifs de ce projet ?
+### Analyse et optimisation des ventes de sites web
+Aperçu des ensembles de données
+Pour ce projet, quatre ensembles de données clés ont été utilisés :
 
-#Quatre datasets  : 
-#un fichier contenant des données comportementales (events.csv), deux fichiers contenant les propriétés des articles 
-(item_properties.сsv) et un fichier décrivant l'arborescence des catégories (category_tree.сsv). 
-Les données ont été collectées à partir d'un site web de commerce électronique réel. 
-Il s'agit de données brutes, c'est-à-dire sans aucune transformation du contenu, mais toutes les valeurs ont été anonymisées pour des raisons de confidentialité. 
-Les données étaient disponibles librement sur Kaggle
+- Données comportementales : Capturé dans le fichier events.csv, cet ensemble de données enregistre les interactions des utilisateurs sur le site Web, fournissant des informations sur les comportements et les préférences des clients.
+- Propriétés des articles : Deux fichiers, item_properties_A.csv et item_properties_B.csv, contenant les attributs détaillés des articles répertoriés sur le site web. Ces ensembles de données sont essentiels pour comprendre les caractéristiques des produits et leur impact sur les ventes.
+- Arbre des catégories : Le fichier category_tree.csv décrit la structure hiérarchique des catégories de produits, essentielle pour analyser les tendances dans les différents segments de produits.
+Toutes les données proviennent d'une véritable plateforme de commerce électronique, ont été rendues anonymes pour des raisons de confidentialité et sont disponibles sur Kaggle.
 
-# Volumetrie :
-#1 file : event csv  275609 lignes / 5 cols
-#2 files : property A  : 2 520 259 lignes / 4 cols and  property B : 2 115 992 lignes / 4 cols
-#1 file category 1669 lignes / 2 cols
+### Volumétrie des données
+- Événements : 275 609 lignes / 5 colonnes
+- Propriétés des articles A : 2 520 259 lignes / 4 colonnes
+- Propriétés de l'élément B : 2 115 992 lignes / 4 colonnes
+- Arbre des catégories : 1 669 lignes / 2 colonnes
+- Lien vers l'ensemble de données Kaggle
 
-https://www.kaggle.com/datasets/retailrocket/ecommerce-dataset
+### Objectifs du projet
+Les principaux objectifs de ce projet étaient les suivants
 
-# 2 
-
-#Les principaux objectifs d'exploration, de la visualisation et du pré-traitement des données pour ce projet de vente en ligne sont :
-
-#Compréhension Approfondie du Comportement des Clients : Identifier les modèles d'achat, les préférences et le comportement des clients pour améliorer la stratégie marketing et la personnalisation des services. 
-
-#Optimisation des Opérations de Vente : Analyser les tendances de vente pour optimiser la gestion des stocks, la tarification, et les campagnes promotionnelles. 
-
-#Amélioration de la Prise de Décision : Fournir des données fiables et des insights pour soutenir les décisions stratégiques de l'entreprise. 
-
-#Identification des Opportunités de Croissance : Découvrir de nouveaux marchés potentiels, segments de clients ou produits populaires susceptibles de générer des revenus supplémentaires. 
-
-#Détection et Correction des Anomalies : Identifier les erreurs ou les anomalies dans les données pour garantir la sécurité et l'efficacité des opérations. 
-
-#Préparation des Données pour des Analyses Avancées : Nettoyer et transformer les données pour faciliter des analyses plus complexes, comme le machine learning ou l'analyse prédictive. 
-
-#Ces objectifs visent à tirer le meilleur parti des données disponibles pour favoriser la croissance et l'efficience de #l'entreprise dans un environnement commercial en constante évolution.
+- Approfondir le comportement des clients : Découvrir les habitudes d'achat et les préférences afin d'améliorer les stratégies de marketing personnalisées et l'engagement des clients.
+- Optimiser les opérations de vente : Analyser les tendances des ventes pour améliorer la gestion des stocks, les stratégies de tarification et l'efficacité des campagnes promotionnelles.
+- Soutenir la prise de décision stratégique : Fournir des informations exploitables, étayées par des données fiables, pour éclairer les décisions clés de l'entreprise.
+- Identifier les opportunités de croissance : Découvrir de nouveaux segments de marché, des produits populaires et des sources de revenus potentielles pour stimuler l'expansion de l'entreprise.
+- Garantir l'intégrité des données : Détecter et corriger les anomalies dans les données pour maintenir la précision et l'efficacité des opérations commerciales.
+- Se préparer à l'analyse avancée : Nettoyer et transformer les données pour faciliter l'analyse avancée, y compris l'apprentissage automatique et la modélisation prédictive.
+Ces objectifs visent à exploiter les données pour stimuler la croissance et l'efficacité opérationnelle dans un environnement commercial dynamique.irer le meilleur parti des données disponibles pour favoriser la croissance et l'efficience de #l'entreprise dans un environnement commercial en constante évolution.
