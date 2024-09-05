@@ -6,9 +6,11 @@ import pandas as pd
 import matplotlib.pyplot as plt
 try:    
     from IPython import get_ipython    
-    get_ipython().run_line_magic('matplotlib', 'inline')
-except (ImportError, NameError):
-    #Pas d'environnement IPython ou pas de fonction get_ipython
+    ipython_instance = get_ipython()    
+    if ipython_instance is not None:        
+        ipython_instance.run_line_magic('matplotlib', 'inline')
+except (ImportError, AttributeError):    
+    #IPython n'est pas disponible ou vous n'êtes pas dans un environnement IPython
     pass
 import seaborn as sns
 import plotly.express as px
