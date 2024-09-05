@@ -4,7 +4,11 @@
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
-get_ipython().run_line_magic('matplotlib', 'inline')
+try:    
+    get_ipython().run_line_magic('matplotlib', 'inline')
+except NameError:    
+    #Pas d'environnement Python,rien a faire ici 
+    pass
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
