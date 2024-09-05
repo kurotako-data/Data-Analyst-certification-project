@@ -1,16 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[1]:
-
-
 import numpy as np
-
 import pandas as pd
-
 import matplotlib.pyplot as plt
 get_ipython().run_line_magic('matplotlib', 'inline')
-
 import seaborn as sns
 import plotly.express as px
 import plotly.graph_objects as go
@@ -18,153 +12,53 @@ from bokeh.plotting import figure, show
 from bokeh.io import output_notebook
 
 
-# In[2]:
+# Chemins des fichiers CSV dans le dépôt GitHub
+chemin_category_tree = 'category_tree copie.csv'
+chemin_events = 'events copie.csv'
+chemin_item_properties_part1 = 'item_properties_part1 copie.csv'
+chemin_item_properties_part2 = 'item_properties_part2 copie.csv'
 
+# Lire les fichiers CSV dans les DataFrames
+df_cat = pd.read_csv(chemin_category_tree)
+df_events = pd.read_csv(chemin_events)
+df_it_prop1 = pd.read_csv(chemin_item_properties_part1)
+df_it_prop2 = pd.read_csv(chemin_item_properties_part2)
 
-from google.colab import drive
-drive.mount('/content/drive', force_remount=True)
+# Enregistrer des copies des fichiers 
+df_cat.to_csv('category_tree copie.csv', index=False)
+df_events.to_csv('events copie.csv', index=False)
+df_it_prop1.to_csv('item_properties_part1 copie.csv', index=False)
+df_it_prop2.to_csv('item_properties_part2 copie.csv', index=False)
 
-
-# In[3]:
-
-
-#Copies de sauvegarde
-
-# Chemins des fichiers originaux
-chemin_category_tree = 'drive/MyDrive/category_tree.csv'
-chemin_events = 'drive/MyDrive/events.csv'
-chemin_item_properties_part1 = 'drive/MyDrive/item_properties_part1.csv'
-chemin_item_properties_part2 = 'drive/MyDrive/item_properties_part2.csv'
-
-# Lire les fichiers originaux
-df_cat = pd.read_csv('drive/MyDrive/category_tree.csv')
-df_events = pd.read_csv('drive/MyDrive/events.csv')
-df_it_prop1 = pd.read_csv('drive/MyDrive/item_properties_part1.csv')
-df_it_prop2 = pd.read_csv('drive/MyDrive/item_properties_part2.csv')
-
-# Enregistrer les copies sous de nouveaux noms
-df_cat.to_csv('drive/MyDrive/category_tree.csv', index=False)
-df_events.to_csv('drive/MyDrive/events.csv', index=False)
-df_it_prop1.to_csv('drive/MyDrive/item_properties_part1.csv', index=False)
-df_it_prop2.to_csv('drive/MyDrive/item_properties_part2.csv', index=False)
-
-
-# In[4]:
-
-
-#
-
-
-# In[5]:
-
-
-# Analyse descriptive, traitement et exploration initiale
-
-
-# In[6]:
-
-
-#1er fichier sur 4
-
-
-# In[7]:
-
-
-copied_path = 'drive/MyDrive/category_tree.csv' #remove ‘content/’ from path then use
-df_cat = pd.read_csv(copied_path)
-
-
-# In[8]:
-
-
-#Exploration initiale et Analyse descriptive de df_cat
-
-
-# In[9]:
-
-
+# Exploration initiale et Analyse descriptive de df_cat
 display(df_cat.head(10))
 display(df_cat.tail(10))
 display(df_cat.info())
 df_cat.describe()
 
-
-# In[10]:
-
-
-#Le code suivant va d'abord identifier les valeurs manquantes dans df_cat,
-#puis il va calculer des statistiques descriptives telles que le nombre de catégories uniques et de parents uniques,
-#et la fréquence des différents types d'événements (comme les vues, les clics, etc.).
-#Enfin, il visualisera ces informations à l'aide d'un histogramme en barres et le nbr de doublons.
-
-
-# In[11]:
-
-
-# Analyse des valeurs manquantes
+# Analyse des valeurs manquantes pour df_cat
 missing_values = df_cat.isnull().sum()
-display("Valeurs manquantes",missing_values)
+display("Valeurs manquantes", missing_values)
 
-# Statistiques descriptives
+# Statistiques descriptives pour df_cat
 unique_categories = df_cat['categoryid'].nunique()
 unique_parents = df_cat['parentid'].nunique()
 top_parent_categories = df_cat['parentid'].value_counts().head(10)
 
-display("Nombre de catégorie uniques",unique_categories)
-display("Nombre de parents uniques",unique_parents)
-display("Fréquences catégorie parents",top_parent_categories)
+display("Nombre de catégories uniques", unique_categories)
+display("Nombre de parents uniques", unique_parents)
+display("Fréquences des catégories parents", top_parent_categories)
 
+# Identification des doublons dans df_cat
+duplicates_cat = df_cat.duplicated().sum()
+display("Nombre de doublons dans df_cat:", duplicates_cat)
 
-# Identification des doublons df_cat
-duplicates_events = df_cat.duplicated().sum()
-display("Nombre de doublons dans df_events:", duplicates_events)
-
-
-# In[12]:
-
-
-#
-
-
-# In[13]:
-
-
-#2ème fichier sur 4
-
-
-# In[14]:
-
-
-copied_path = 'drive/MyDrive/events.csv' #remove ‘content/’ from path then use
-df_events = pd.read_csv(copied_path)
-
-
-# In[15]:
-
-
-#Exploration initiale et Analyse descriptive de df_events
-
-
-# In[16]:
-
-
+# Exploration initiale et Analyse descriptive de df_events
+df_events = pd.read_csv(chemin_events)
 display(df_events.head(10))
 display(df_events.tail(10))
 display(df_events.info())
 df_events.describe()
-
-
-# In[17]:
-
-
-#Le code suivant va d'abord identifier les valeurs manquantes dans df_events,
-#puis il va calculer des statistiques descriptives telles que le nombre de visiteurs uniques et d'articles uniques,
-#et la fréquence des différents types d'événements (comme les vues, les clics, etc.).
-#Enfin, il visualisera ces informations à l'aide d'un histogramme en barres et le nbr de doublons
-
-
-# In[18]:
-
 
 # Analyse des valeurs manquantes pour df_events
 missing_values_events = df_events.isnull().sum()
@@ -178,62 +72,19 @@ top_items_viewed = df_events[df_events['event'] == 'view']['itemid'].value_count
 
 display("Nombre de visiteurs uniques", unique_visitors)
 display("Nombre d'articles uniques", unique_items)
-display("Fréquences des événements", events_count)
+display("Fréquence des événements", events_count)
 display("Top 10 des articles les plus consultés", top_items_viewed)
 
-
-# Identification des doublons df_events
+# Identification des doublons dans df_events
 duplicates_events = df_events.duplicated().sum()
 display("Nombre de doublons dans df_events:", duplicates_events)
 
-
-# In[19]:
-
-
-#
-
-
-# In[20]:
-
-
-#3ème fichier sur 4
-
-
-# In[21]:
-
-
-copied_path = 'drive/MyDrive/item_properties_part1.csv' #remove ‘content/’ from path then use
-df_it_prop1 = pd.read_csv(copied_path)
-
-
-# In[22]:
-
-
-#Exploration initiale et Analyse descriptive de df_it_prop1
-
-
-# In[23]:
-
-
+# Exploration initiale et Analyse descriptive de df_it_prop1
+df_it_prop1 = pd.read_csv(chemin_item_properties_part1)
 display(df_it_prop1.head(10))
 display(df_it_prop1.tail(10))
 display(df_it_prop1.info())
 df_it_prop1.describe()
-
-
-# In[24]:
-
-
-#Ce script réalise une analyse similaire à celle que nous avons fait pour df_cat et df_events.
-#Il commence par identifier les valeurs manquantes dans df_it_prop1,
-#puis calcule des statistiques descriptives comme le nombre d'articles uniques et de propriétés uniques,
-#et la fréquence des propriétés les plus courantes.
-#Enfin, il visualise ces données à l'aide d'un histogramme en barres,
-#mettant en avant les 10 propriétés les plus fréquentes puis le nbr de doublons
-
-
-# In[25]:
-
 
 # Analyse des valeurs manquantes pour df_it_prop1
 missing_values_it_prop1 = df_it_prop1.isnull().sum()
@@ -248,44 +99,33 @@ display("Nombre d'articles uniques dans df_it_prop1", unique_items_prop1)
 display("Nombre de propriétés uniques", unique_properties)
 display("Top 10 des propriétés les plus fréquentes", top_properties)
 
+# Identification des doublons dans df_it_prop1
+duplicates_it_prop1 = df_it_prop1.duplicated().sum()
+display("Nombre de doublons dans df_it_prop1:", duplicates_it_prop1)
 
-# Identification des doublons df_it_prop1
-duplicates_events = df_it_prop1.duplicated().sum()
-display("Nombre de doublons dans df_it_prop1:", duplicates_events)
-
-
-# In[26]:
-
-
-#
-
-
-# In[27]:
-
-
-#4ème fichier sur 4
-
-
-# In[28]:
-
-
-copied_path = 'drive/MyDrive/item_properties_part2.csv' #remove ‘content/’ from path then use
-df_it_prop2 = pd.read_csv(copied_path)
-
-
-# In[29]:
-
-
-#Exploration initiale et Analyse descriptive de df_it_prop2
-
-
-# In[30]:
-
-
+# Exploration initiale et Analyse descriptive de df_it_prop2
+df_it_prop2 = pd.read_csv(chemin_item_properties_part2)
 display(df_it_prop2.head(10))
 display(df_it_prop2.tail(10))
 display(df_it_prop2.info())
 df_it_prop2.describe()
+
+# Analyse des valeurs manquantes pour df_it_prop2
+missing_values_it_prop2 = df_it_prop2.isnull().sum()
+display("Valeurs manquantes dans df_it_prop2", missing_values_it_prop2)
+
+# Statistiques descriptives pour df_it_prop2
+unique_items_prop2 = df_it_prop2['itemid'].nunique()
+unique_properties_prop2 = df_it_prop2['property'].nunique()
+top_properties_prop2 = df_it_prop2['property'].value_counts().head(10)
+
+display("Nombre d'articles uniques dans df_it_prop2", unique_items_prop2)
+display("Nombre de propriétés uniques dans df_it_prop2", unique_properties_prop2)
+display("Top 10 des propriétés les plus fréquentes", top_properties_prop2)
+
+# Identification des doublons dans df_it_prop2
+duplicates_it_prop2 = df_it_prop2.duplicated().sum()
+display("Nombre de doublons dans df_it_prop2:", duplicates_it_prop2)
 
 
 # In[31]:
