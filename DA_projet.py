@@ -1771,7 +1771,7 @@ plt.show()
 # In[158]:
 
 
-pip install -U imbalanced-learn
+#pip install -U imbalanced-learn
 
 
 # In[159]:
