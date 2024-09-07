@@ -44,12 +44,28 @@ from sklearn.svm import OneClassSVM
 
 #from imblearn.metrics import geometric_mean_score
 
-#CSS
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown('<style>{}</style>'.format(f.read()), unsafe_allow_html = True)
-
-local_css("./css/style.css")
+#CSS directement intégré
+st.markdown("""
+    <style>
+        body {
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        /* Ajoutez d'autres styles ici selon vos besoins */
+        .custom-class {
+            background-color: #e0e0e0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    """, unsafe_allow_html=True)
 
 
 ####################################################################################################
