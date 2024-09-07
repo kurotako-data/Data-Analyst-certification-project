@@ -93,10 +93,10 @@ def load_data(url):
   return df
 
 # Import CSV
-df_it_prop1 = load_data("./sources/item_properties_part1.csv")
-df_it_prop2 = load_data("./sources/item_properties_part2.csv" )
-df = load_data("./sources/events.csv")
-category_tree = load_data("./sources/category_tree.csv" )
+df_it_prop1 = load_data("./item_properties_part1 copie.csv")
+df_it_prop2 = load_data("./item_properties_part2.csv" )
+df = load_data("./events.csv")
+category_tree = load_data("./category_tree.csv" )
 
 @st.cache_data
 def create_item(df1, df2):
