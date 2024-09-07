@@ -251,25 +251,25 @@ if page == pages[0] :
   st.title("Projet E-commerce DS - SEP23")
   st.markdown("<h4 class = 'bordered_blue'>Projet E-commerce: Comprendre le comportement des utilisateurs du site et prédire leurs comportements futurs</h4>", unsafe_allow_html = True)
   st.write("")  
-  st.image('./images/data-analyst.png', width = 2700)
-  st.markdown("<h4 class = 'bordered'>Membres du porjet</h4>", unsafe_allow_html = True)
-  st.write("")
-  col1, col2, col3, col4, col5 = st.columns(5)
-  with col1:
-    st.markdown("<h6 class = 'centered'>Ahmad Benomari</h6>", unsafe_allow_html = True)
-    st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/ahmad_benomari.jpg') + "</p>", unsafe_allow_html = True)
-  with col2:
-    st.markdown("<h6 class = 'centered'>Marc Benedetto</h6>", unsafe_allow_html = True)
-    st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/marc_benedetto.jpg') + "</p>", unsafe_allow_html = True)
-  with col3:
-    st.markdown("<h6 class = 'centered'>Michèle Gaba</h6>", unsafe_allow_html = True)
-    st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/michele_gaba.jpg') + "</p>", unsafe_allow_html = True)
-  with col4:
-    st.markdown("<h6 class = 'centered'>Partice Giardino</h6>", unsafe_allow_html = True)
-    st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/partice_giardino.png') + "</p>", unsafe_allow_html = True)
-  with col5:
-    st.markdown("<h6 class = 'centered'>Radouan Chemmaa</h6>", unsafe_allow_html = True)
-    st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/radouan_chemmaa.jpg') + "</p>", unsafe_allow_html = True)
+  # st.image('./images/data-analyst.png', width = 2700) ( image perdue et inutile )
+  # st.markdown("<h4 class = 'bordered'>Membres du porjet</h4>", unsafe_allow_html = True)
+  # st.write("")
+  # col1, col2, col3, col4, col5 = st.columns(5)
+  # with col1:
+    # st.markdown("<h6 class = 'centered'>Ahmad Benomari</h6>", unsafe_allow_html = True)
+    # st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/ahmad_benomari.jpg') + "</p>", unsafe_allow_html = True)
+  # with col2:
+    # st.markdown("<h6 class = 'centered'>Marc Benedetto</h6>", unsafe_allow_html = True)
+    # st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/marc_benedetto.jpg') + "</p>", unsafe_allow_html = True)
+  # with col3:
+    # st.markdown("<h6 class = 'centered'>Michèle Gaba</h6>", unsafe_allow_html = True)
+    # st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/michele_gaba.jpg') + "</p>", unsafe_allow_html = True)
+  # with col4:
+    # st.markdown("<h6 class = 'centered'>Partice Giardino</h6>", unsafe_allow_html = True)
+    # st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/partice_giardino.png') + "</p>", unsafe_allow_html = True)
+  # with col5:
+    # st.markdown("<h6 class = 'centered'>Radouan Chemmaa</h6>", unsafe_allow_html = True)
+    # st.markdown("<p style='text-align: center;'>"+ img_to_html('./images/radouan_chemmaa.jpg') + "</p>", unsafe_allow_html = True)
 
 ###########################################################################################################################################################################################################
 # Exploration des datasets
