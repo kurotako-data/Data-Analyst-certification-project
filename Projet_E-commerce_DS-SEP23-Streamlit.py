@@ -94,9 +94,9 @@ def load_data(url):
 
 # Import CSV
 df_it_prop1 = load_data("./item_properties_part1 copie.csv")
-df_it_prop2 = load_data("./item_properties_part2.csv" )
-df = load_data("./events.csv")
-category_tree = load_data("./category_tree.csv" )
+df_it_prop2 = load_data("./item_properties_part2 copie.csv" )
+df = load_data("./events copie.csv")
+category_tree = load_data("./category_tree copie.csv" )
 
 @st.cache_data
 def create_item(df1, df2):
