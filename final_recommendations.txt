@@ -1,0 +1,31 @@
+Interprétation et Conclusion
+Synthèse des résultats des modèles et recommandations stratégiques pour le site e-commerce
+Au cours de l'analyse de la Data Visualisation, nous avons observé qu'un nombre important de produits étaient indisponibles durant la période considérée, ce qui a probablement impacté la réalisation des transactions et, par conséquent, les résultats de nos modèles prédictifs.
+
+Grâce au KMeans, nous avons pu identifier quatre segments distincts d’utilisateurs. Parmi eux, les clusters 1 et 3 se distinguent comme des opportunités de vente supplémentaires. Nous recommandons d’approfondir l’analyse des catégories de produits de ces clusters pour mettre en lumière des produits ou des offres performantes. Le score de silhouette montre une segmentation acceptable.
+
+* Recommandations :
+Cluster 1 : Ce groupe représente une priorité. En isolant ce segment, des actions ciblées peuvent être menées pour améliorer l’expérience utilisateur, en particulier sur la disponibilité des produits. Notamment, 40% des produits sont indisponibles dans ce cluster, ce qui pénalise directement le taux de conversion.
+
+Cluster 3 : Il regroupe des clients fidèles pour lesquels des campagnes promotionnelles peuvent être envisagées afin d'augmenter la fréquence et le volume d'achat.
+
+Les clusters 0 et 2, quant à eux, présentent un défi plus complexe, avec une indisponibilité des produits allant jusqu'à 60% pour le cluster 0.
+
+Au-delà des stratégies marketing, il est impératif d'améliorer la disponibilité des produits, un facteur essentiel pour augmenter les ventes.
+
+* Analyse des modèles :
+Régression Linéaire (RL) : Bien que le modèle RL ait montré de bonnes performances en termes de précision, il s'est avéré insuffisant pour prédire avec précision le nombre de transactions. La faible performance prédictive, mesurée par le R2, peut néanmoins être acceptable si le modèle est utilisé pour des prévisions approximatives. Il sera essentiel d’améliorer la qualité des données pour renforcer l’utilité de ce modèle dans le futur. De plus, inclure des variables supplémentaires (par exemple, des données démographiques ou des historiques d'achat) pourrait améliorer la précision.
+
+Isolation Forest (IFor) : Ce modèle a bien fonctionné pour identifier les comportements normaux, mais a généré un nombre élevé de faux positifs lorsqu'il s'agissait de détecter des anomalies dans les ventes. Des ajustements supplémentaires seront nécessaires pour mieux identifier les opportunités de ventes croisées et les comportements atypiques des utilisateurs.
+
+* Nos préconisations :
+Régression linéaire : Utiliser ce modèle pour évaluer l'effet des actions marketing sur les ventes, tout en améliorant la qualité des données et en ajoutant des variables pertinentes.
+
+KMeans : Exploiter les résultats pour personnaliser l'expérience utilisateur par segment d'acheteurs et sensibiliser les vendeurs (s'il s'agit d'une marketplace) à l'impact de l’indisponibilité des produits.
+
+Isolation Forest : Surveiller les anomalies et ajuster les campagnes marketing en conséquence.
+
+* Amélioration continue : Une veille permanente sur les nouvelles variables et un raffinement des modèles seront nécessaires pour maintenir la compétitivité sur ce marché dynamique.
+
+Pour aller plus loin, il serait intéressant d'inclure des données socio-démographiques ou d'effectuer des entretiens avec l'équipe de gestion des commandes et des stocks pour mieux comprendre les défis logistiques du site.
+
